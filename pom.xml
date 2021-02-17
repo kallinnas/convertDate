@@ -51,6 +51,12 @@
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.3</version>
+				<configuration>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/gregdate-0.0.1-SNAPSHOT.jar Main</web>
+					</processTypes>
+				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
